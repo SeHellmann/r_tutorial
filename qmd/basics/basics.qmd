@@ -33,7 +33,7 @@ We can combine multiple elements to build a new one:
 new_element <- c(1, 10, 15)
 ```
 
-In this case, this new element is a [vector](https://nickhaf.github.io/r_tutorial/qmd/data_structures/data_structures.html#vector), which is a one dimensional collection of values. The `c()` stands for combine, or concatenate, and is the basic function for building a vector out of single elements.
+In this case, this new element is a [vector](./qmd/final_exercise/data_structures.html#vector), which is a one dimensional collection of values. The `c()` stands for combine, or concatenate, and is the basic function for building a vector out of single elements.
 
 ## Comparisons and Logical Operators
 

@@ -5,7 +5,7 @@ website:
   title: "Introduction to R"
   page-navigation: true
   open-graph: true
-  repo-url: https://github.com/nickhaf/r_tutorial
+  repo-url: https://github.com/SeHellmann/r_tutorial
   repo-actions: [edit]
   navbar:
     search: true
@@ -16,7 +16,7 @@ website:
       - qmd/getting_started/the_big_picture.qmd
       - qmd/final_exercise/final_exercise.qmd
     right: 
-      - href: https://docs.google.com/document/d/19uUsS9xiAsxmAtblkaPqbdl3m1IxurWKOoPdTc0oymM/edit?usp=sharing
+      - href: https://kude-my.sharepoint.com/:w:/g/personal/sebastian_hellmann_ku_de/EXNB2LZy7elLrbA_i15X-gsBz6fz5Fwvf8n9T5K9C-rGTg?e=B7b9I8
         text: Ask a question
   sidebar: 
     style: "docked"
