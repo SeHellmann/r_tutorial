@@ -1,1 +1,1 @@
-Sitemap: https://github.com/nickhaf/r_tutorial/sitemap.xml
+Sitemap: https://SeHellmann.github.io/r_tutorial/sitemap.xml
