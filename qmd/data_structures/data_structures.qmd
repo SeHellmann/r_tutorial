@@ -43,7 +43,7 @@ str(char_vec)
 str(log_vec)
 ```
 
-The first one is `num` (numeric) so it only stores numeric values. The second one is `char` (character), so it only can contain strings. And last but not least we have `logi` (logical) for [boolean values](basics.qmd#comparisons-and-logical-operators). Why is that important? Well, some functions only make sense for specific data types. For example:
+The first one is `num` (numeric) so it only stores numeric values. The second one is `char` (character), so it only can contain strings. And last but not least we have `logi` (logical) for [boolean values](../basics/basics.qmd#comparisons-and-logical-operators). Why is that important? Well, some functions only make sense for specific data types. For example:
 
 ```{r}
 mean(char_vec)

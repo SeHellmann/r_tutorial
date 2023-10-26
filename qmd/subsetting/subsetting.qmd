@@ -113,7 +113,7 @@ athletes_team <- athletes[athletes$Team %in% c("Kenya", "Norway"), ]
 head(athletes_team)
 ```
 
-We can also combine multiple logical vectors using [`&` ("and") and `|` ("or")](https://nickhaf.github.io/r_tutorial/qmd/basics/basics.html#or-and-and). For example, we might want to look at all german athletes before the year 2000:
+We can also combine multiple logical vectors using [`&` ("and") and `|` ("or")](../basics/basics.qmd#or-and-and). For example, we might want to look at all german athletes before the year 2000:
 
 ```{r}
 athletes_2 <- athletes[athletes$Team == "Germany" & athletes$Year < 2000, ]

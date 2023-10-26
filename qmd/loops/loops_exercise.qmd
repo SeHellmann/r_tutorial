@@ -73,7 +73,7 @@ Note how we don't have to use `i` as counter (even though it is convention).
 
 ## Exercise 2
 
-Remember how we used the `group_by()` command to [calculate the number of gold medals for each country](https://nickhaf.github.io/r_tutorial/qmd/merging/merging.html#before-merging)? Well, now you know enough to do something similar without using the tidyverse, by using a `for-loop`.
+Remember how we used the `group_by()` command to [calculate the number of gold medals for each country](../merging/merging.qmd#before-merging)? Well, now you know enough to do something similar without using the tidyverse, by using a `for-loop`.
 
 1.  Subset a data frame that only contains the characters of one (your favorite) fictional universe.
 
