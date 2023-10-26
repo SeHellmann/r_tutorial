@@ -682,7 +682,7 @@ Previous code
 </div>
 <section id="what-are-nas" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-nas">What are <code>NA's</code>?</h2>
-<p>Remember the weird <code>NA</code> rows we have encountered when <a href="https://nickhaf.github.io/r_tutorial/qmd/subsetting/subsetting.html#conditional-filtering">subsetting by condition</a>? We were able to steer around that by using <code>filter()</code>, but let’s take a closer look at that now.</p>
+<p>Remember the weird <code>NA</code> rows we have encountered when <a href="../../qmd/subsetting/subsetting.html#conditional-filtering">subsetting by condition</a>? We were able to steer around that by using <code>filter()</code>, but let’s take a closer look at that now.</p>
 <p>Missing values are denoted in R by <code>NA</code> (or <code>NaN</code> in some cases). They nullify a calculation or comparison pretty strongly - if one missing value is found somewhere along the line, the result will also be <code>NA</code> (if not specified otherwise):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">4</span>, <span class="cn">NA</span>) <span class="sc">&gt;</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -741,7 +741,7 @@ Unfold if you want to take a closer look at what’s happening here
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Like always when <a href="https://nickhaf.github.io/r_tutorial/qmd/subsetting/subsetting.html#conditional-filtering">filtering specific rows</a>, we define a <a href="https://nickhaf.github.io/r_tutorial/qmd/basics/basics.html#comparisons-and-logical-operators">logical vector</a>, which has a <code>TRUE</code> for all rows that have a missing on <code>ID</code> and a <code>FALSE</code> for all others (by using the <code>!</code> operator, which inverts the boolean values - otherwise we would extract all rows with missing values in the <code>Weight</code> column):</p>
+<p>Like always when <a href="../../qmd/subsetting/subsetting.html#conditional-filtering">filtering specific rows</a>, we define a <a href="../../qmd/basics/basics.html#comparisons-and-logical-operators">logical vector</a>, which has a <code>TRUE</code> for all rows that have a missing on <code>ID</code> and a <code>FALSE</code> for all others (by using the <code>!</code> operator, which inverts the boolean values - otherwise we would extract all rows with missing values in the <code>Weight</code> column):</p>
 <div class="cell" data-output.lines="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span><span class="fu">is.na</span>(athletes<span class="sc">$</span>Weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

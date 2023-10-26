@@ -904,7 +904,7 @@ Unfold if you want to take a closer look at what’s happening here
 ...</code></pre>
 </div>
 </div>
-<p>We can also combine multiple logical vectors using <a href="https://nickhaf.github.io/r_tutorial/qmd/basics/basics.html#or-and-and"><code>&amp;</code> (“and”) and <code>|</code> (“or”)</a>. For example, we might want to look at all german athletes before the year 2000:</p>
+<p>We can also combine multiple logical vectors using <a href="../../qmd/basics/basics.html#or-and-and"><code>&amp;</code> (“and”) and <code>|</code> (“or”)</a>. For example, we might want to look at all german athletes before the year 2000:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>athletes_2 <span class="ot">&lt;-</span> athletes[athletes<span class="sc">$</span>Team <span class="sc">==</span> <span class="st">"Germany"</span> <span class="sc">&amp;</span> athletes<span class="sc">$</span>Year <span class="sc">&lt;</span> <span class="dv">2000</span>, ]</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(athletes_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

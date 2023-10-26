@@ -706,7 +706,7 @@ Goal
 </section>
 <section id="load-data" class="level2">
 <h2 class="anchored" data-anchor-id="load-data">Load Data</h2>
-<p>Data is <a href="../../qmd/load_data/load_data.html">loaded into R</a> so you can work with it. For this chapter, we are going to use the data set <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-03-22/readme.md"><code>babynames</code></a>, which we can find on the <a href="https://github.com/rfordatascience/tidytuesday"><code>tidytuesday</code></a> site. I have already tweaked the data set a bit, so download it from <a href="https://github.com/SeHellmann/r_tutorial/tree/main/raw_data">here</a> to follow along (in case you haven’t already in the <a href="https://nickhaf.github.io/r_tutorial/qmd/workflow/workflow_exercise.html#exercise-2-download-data">previous exercise</a>.</p>
+<p>Data is <a href="../../qmd/load_data/load_data.html">loaded into R</a> so you can work with it. For this chapter, we are going to use the data set <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-03-22/readme.md"><code>babynames</code></a>, which we can find on the <a href="https://github.com/rfordatascience/tidytuesday"><code>tidytuesday</code></a> site. I have already tweaked the data set a bit, so download it from <a href="https://github.com/SeHellmann/r_tutorial/tree/main/raw_data">here</a> to follow along (in case you haven’t already in the <a href="../../qmd/workflow/workflow_exercise.html#exercise-2-download-data">previous exercise</a>.</p>
 <p>So, after downloading it and saving it in the folder <code>raw_data</code> within my project directory, I can load the data set into R with:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>babynames <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./raw_data/babynames.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -744,7 +744,7 @@ Goal
 </section>
 <section id="merging" class="level2">
 <h2 class="anchored" data-anchor-id="merging">Merging</h2>
-<p>Sadly the data is not complete. If we had the number of people born with a specific name for every year, we could find out which name was the most common each year (which is our goal, as you might remember). However, the number of people is missing from our data (ok, i split it up for illustrative purposes). So let’s <a href="https://github.com/nickhaf/r_tutorial/tree/main/raw_data">download</a> <code>babynames_n.csv</code> (in case you haven’t already) and <a href="../../qmd/load_data/load_data.html">load it into R</a>:</p>
+<p>Sadly the data is not complete. If we had the number of people born with a specific name for every year, we could find out which name was the most common each year (which is our goal, as you might remember). However, the number of people is missing from our data (ok, i split it up for illustrative purposes). So let’s <a href="https://github.com/SeHellmann/r_tutorial/tree/main/raw_data">download</a> <code>babynames_n.csv</code> (in case you haven’t already) and <a href="../../qmd/load_data/load_data.html">load it into R</a>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>babynames_n <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"./raw_data/babynames_n.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -793,11 +793,11 @@ Goal
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>Wondering what the <code>%&gt;%</code> means? That’s a <a href="https://nickhaf.github.io/r_tutorial/qmd/basics/tidyverse.html#the-pipe-operator">pipe operator</a>, which is used, mainly in the <a href="../../qmd/basics/tidyverse.html"><code>tidyverse</code></a>, to connect multiple function calls. This can make code a lot more readable. Here we start with the <code>babynames_merged</code> data set and then perform an operation on it, in this case filtering specific values.</p>
+<p>Wondering what the <code>%&gt;%</code> means? That’s a <a href="../../qmd/basics/tidyverse.html#the-pipe-operator">pipe operator</a>, which is used, mainly in the <a href="../../qmd/basics/tidyverse.html"><code>tidyverse</code></a>, to connect multiple function calls. This can make code a lot more readable. Here we start with the <code>babynames_merged</code> data set and then perform an operation on it, in this case filtering specific values.</p>
 </section>
 <section id="adding-a-new-column" class="level2">
 <h2 class="anchored" data-anchor-id="adding-a-new-column">Adding a new column</h2>
-<p>Now, we want to plot the percentages of each name instead of the probability, because it looks a bit more intuitive (in my opinion). So, let’s <a href="https://nickhaf.github.io/r_tutorial/qmd/getting_started/the_big_picture.html#adding-a-new-column">build a new column</a> named <code>percentage</code>, which is just the <code>prop</code> column multiplied by <code>100</code>:</p>
+<p>Now, we want to plot the percentages of each name instead of the probability, because it looks a bit more intuitive (in my opinion). So, let’s <a href="../../qmd/getting_started/the_big_picture.html#adding-a-new-column">build a new column</a> named <code>percentage</code>, which is just the <code>prop</code> column multiplied by <code>100</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>babynames_F<span class="sc">$</span>percentage <span class="ot">&lt;-</span> babynames_F<span class="sc">$</span>prop <span class="sc">*</span> <span class="dv">100</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(babynames_F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -814,7 +814,7 @@ Goal
 </section>
 <section id="selecting-columns" class="level2">
 <h2 class="anchored" data-anchor-id="selecting-columns">Selecting columns</h2>
-<p>Now we can trim down our data set a bit more and <a href="https://nickhaf.github.io/r_tutorial/qmd/subsetting/subsetting.html#columns-tidyverse">select</a> only the columns we are actually going to need:</p>
+<p>Now we can trim down our data set a bit more and <a href="../../qmd/subsetting/subsetting.html#columns-tidyverse">select</a> only the columns we are actually going to need:</p>
 <div class="tidy">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>babynames_F <span class="ot">&lt;-</span> babynames_F <span class="sc">%&gt;%</span></span>
@@ -869,7 +869,7 @@ Goal
 <h2 class="anchored" data-anchor-id="plot-the-data">Plot the data</h2>
 <p>We will use the package <code>ggplot2</code> (which is also part of the <code>tidyverse</code>) for <a href="../../qmd/plotting/plotting.html">plotting our data</a>. It should be mentioned that <code>Base R</code> also has some powerful plotting functions, however, <code>ggplot2</code> makes it very easy to build complex and beautiful plots.</p>
 <p>A <code>ggplot</code> is constructed from multiple layers that can be laid over each other using the <code>+</code> operator.</p>
-<p>We start with the function <a href="https://nickhaf.github.io/r_tutorial/qmd/plotting/plotting.html#ggplot"><code>ggplot()</code></a>, in which we define our data and the x and y axes. This will draw our (empty) coordinate system. We have to use the <a href="https://nickhaf.github.io/r_tutorial/qmd/plotting/plotting.html#aes"><code>aes()</code></a> (aesthetics) function for everything that changes in relation to the data. For example, the exact location of each element in the plot is dependent on the x and y position deposited in the data, so we have to specify our axes inside the <code>aes()</code> function:</p>
+<p>We start with the function <a href="../../qmd/plotting/plotting.html#ggplot"><code>ggplot()</code></a>, in which we define our data and the x and y axes. This will draw our (empty) coordinate system. We have to use the <a href="../../qmd/plotting/plotting.html#aes"><code>aes()</code></a> (aesthetics) function for everything that changes in relation to the data. For example, the exact location of each element in the plot is dependent on the x and y position deposited in the data, so we have to specify our axes inside the <code>aes()</code> function:</p>
 <div class="tidy">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
@@ -883,7 +883,7 @@ Goal
 <p><img src="the_big_picture_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="1056"></p>
 </div>
 </div>
-<p>Now that we have defined our aesthetics, we can add a <a href="https://nickhaf.github.io/r_tutorial/qmd/plotting/plotting.html#geom_"><code>geom</code>-layer</a>. This will make use of the data we have defined in <code>ggplot()</code> and plot some bars for us:</p>
+<p>Now that we have defined our aesthetics, we can add a <a href="../../qmd/plotting/plotting.html#geom_"><code>geom</code>-layer</a>. This will make use of the data we have defined in <code>ggplot()</code> and plot some bars for us:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

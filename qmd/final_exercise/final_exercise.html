@@ -706,7 +706,7 @@ Tip
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
 <section id="loading-data" class="level3">
 <h3 class="anchored" data-anchor-id="loading-data">1) Loading Data</h3>
-<p><a href="https://nickhaf.github.io/r_tutorial/qmd/workflow/workflow_exercise.html#exercise-2-download-data">Download</a> the data sets <a href="https://github.com/SeHellmann/r_tutorial/tree/main/raw_data"><code>vb_w</code> and <code>vb_l</code></a> and <a href="../../qmd/load_data/load_data.html">load the data</a> into R. <code>vb_w</code> contains the stats of the winning team, <code>vb_l</code> the stats of the losing team.</p>
+<p><a href="../../qmd/workflow/workflow_exercise.html#exercise-2-download-data">Download</a> the data sets <a href="https://github.com/SeHellmann/r_tutorial/tree/main/raw_data"><code>vb_w</code> and <code>vb_l</code></a> and <a href="../../qmd/load_data/load_data.html">load the data</a> into R. <code>vb_w</code> contains the stats of the winning team, <code>vb_l</code> the stats of the losing team.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -722,7 +722,7 @@ Hints
 <ol type="1">
 <li>Admittedly not the easiest data loading exercise. One file is a <code>.csv</code> file, the other an SPSS file (<code>.sav</code>). Take a look <a href="../../qmd/load_data/load_data.html">here</a> to see how to load them into R.</li>
 <li>You need to install <code>haven</code> to load the <code>.sav</code> file.</li>
-<li>You need to look at the <code>sep</code> argument in <code>read.csv()</code>: It needs to specify how the values in the <code>.csv</code> file are separated. Use a text editor to take a look into the file itself to find out what the separator should be. We have seen a similar example in <a href="https://nickhaf.github.io/r_tutorial/qmd/load_data/load_data_exercise.html#exercies-2">Loading Data: Exercise 2</a>.</li>
+<li>You need to look at the <code>sep</code> argument in <code>read.csv()</code>: It needs to specify how the values in the <code>.csv</code> file are separated. Use a text editor to take a look into the file itself to find out what the separator should be. We have seen a similar example in <a href="../../qmd/load_data/load_data_exercise.html#exercies-2">Loading Data: Exercise 2</a>.</li>
 </ol>
 </div>
 </div>
@@ -1018,7 +1018,7 @@ Solution
 </section>
 <section id="selecting-columns" class="level3">
 <h3 class="anchored" data-anchor-id="selecting-columns">3) Selecting Columns</h3>
-<p><a href="https://nickhaf.github.io/r_tutorial/qmd/subsetting/subsetting.html#columns">Select</a> only the columns from the data frames that are relevant to our ‘research question’.</p>
+<p><a href="../../qmd/subsetting/subsetting.html#columns">Select</a> only the columns from the data frames that are relevant to our ‘research question’.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1094,7 +1094,7 @@ Solution
 </section>
 <section id="calculating-mean" class="level3">
 <h3 class="anchored" data-anchor-id="calculating-mean">5) Calculating Mean</h3>
-<p>Calculate the mean height by team. Add the results in two <a href="https://nickhaf.github.io/r_tutorial/qmd/getting_started/the_big_picture.html#adding-a-new-column">new columns</a> to the <code>vb</code> data frame, one for the losing team mean height, and one for the winning team mean height.</p>
+<p>Calculate the mean height by team. Add the results in two <a href="../../qmd/getting_started/the_big_picture.html#adding-a-new-column">new columns</a> to the <code>vb</code> data frame, one for the losing team mean height, and one for the winning team mean height.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1141,7 +1141,7 @@ Solution
 <p>Now, let’s do a paired t-test comparing the mean winners height against the mean losers height.</p>
 <section id="histogram" class="level3">
 <h3 class="anchored" data-anchor-id="histogram">1) Histogram</h3>
-<p>One assumption of the paired t-test is that the differences of the pairs are normally distributed. Check this assumption <a href="../../qmd/plotting/plotting.html">visually</a> by creating a histogram of the <code>winning_height - losing_height</code> difference. Use a <a href="../for_loop/for_loop.qmd"><code>for-loop</code></a> to create one histogram for the men and one for the women. You need to explicitly <code>print()</code> the plot if you want to display it from within a <code>for-loop</code>.</p>
+<p>One assumption of the paired t-test is that the differences of the pairs are normally distributed. Check this assumption <a href="../../qmd/plotting/plotting.html">visually</a> by creating a histogram of the <code>winning_height - losing_height</code> difference. Use a <a href="../../qmd/loops/loops.html"><code>for-loop</code></a> to create one histogram for the men and one for the women. You need to explicitly <code>print()</code> the plot if you want to display it from within a <code>for-loop</code>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1203,7 +1203,7 @@ Solution
 </section>
 <section id="paired-t-test" class="level3">
 <h3 class="anchored" data-anchor-id="paired-t-test">2) Paired t-test</h3>
-<p>Do a paired t-test comparing the winning teams height vs the losing teams height. Again use a <a href="../loops/loopq.qmd"><code>for-loop</code></a> to test for men and women separately. Save the result in a <a href="https://nickhaf.github.io/r_tutorial/qmd/data_structures/data_structures.html#honorable-mention-list">list</a>, and name the list elements.</p>
+<p>Do a paired t-test comparing the winning teams height vs the losing teams height. Again use a <a href="../../qmd/loops/loops.html"><code>for-loop</code></a> to test for men and women separately. Save the result in a <a href="../../qmd/data_structures/data_structures.html#honorable-mention-list">list</a>, and name the list elements.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1441,7 +1441,7 @@ Hint
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We want four violin plots/box plots in the end. Two for the winning teams (men, women), and two for the losing teams (men/women). The easiest way to achieve this is to <a href="https://nickhaf.github.io/r_tutorial/qmd/getting_started/the_big_picture.html#adding-a-new-column">build a new column</a> containing the winning information and the gender in one pasted string. This new column can then be used as the x axis. This is not necessarily required, but makes it easier to lay the boxplot on top of the violin plot.</p>
+<p>We want four violin plots/box plots in the end. Two for the winning teams (men, women), and two for the losing teams (men/women). The easiest way to achieve this is to <a href="../../qmd/getting_started/the_big_picture.html#adding-a-new-column">build a new column</a> containing the winning information and the gender in one pasted string. This new column can then be used as the x axis. This is not necessarily required, but makes it easier to lay the boxplot on top of the violin plot.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution callout-titled">
