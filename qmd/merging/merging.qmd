@@ -22,7 +22,7 @@ athletes <- readRDS(file = here::here("raw_data", "athletes.rds"))
 
 ## Data set
 
-In the end, we want to plot the number of gold medals the countries have won on a world map. To do that, we need a data set containing coordinates of the different countries. Luckily, `ggplot2` (part of the `tidyverse`) provides a fitting data set. Let's [download](https://github.com/nickhaf/r_tutorial/tree/main/raw_data) it and load it into R:
+In the end, we want to plot the number of gold medals the countries have won on a world map. To do that, we need a data set containing coordinates of the different countries. Luckily, `ggplot2` (part of the `tidyverse`) provides a fitting data set. Let's [download](https://github.com/SeHellmann/r_tutorial/tree/main/raw_data) it and load it into R:
 
 ```{r}
 world_coordinates <- readRDS(file = here::here("raw_data", "world_coordinates.rds"))

@@ -26,6 +26,7 @@ athletes <- readRDS(file = here::here("raw_data", "athletes.rds"))
 :::
 
 ## What are `NA's`?
+
 Remember the weird `NA` rows we have encountered when [subsetting by condition](https://nickhaf.github.io/r_tutorial/qmd/subsetting/subsetting.html#conditional-filtering)? We were able to steer around that by using `filter()`, but let's take a closer look at that now.
 
 Missing values are denoted in R by `NA` (or `NaN` in some cases). They nullify a calculation or comparison pretty strongly - if one missing value is found somewhere along the line, the result will also be `NA` (if not specified otherwise):
@@ -39,6 +40,7 @@ That's why we got some `NA` rows when trying to extract specific rows by weight:
 ## How to deal with them?
 
 ### Find `NA's`
+
 To check if values are `NA`, we can use `is.na()`:
 
 ```{r, output.lines = 4}
@@ -54,6 +56,7 @@ sum(is.na(athletes$Weight))
 We seem to have `r sum(is.na(athletes$Weight))` missings in this column.
 
 ### Filtering rows with `NA's`
+
 There are multiple different ways to deal with missings. For our comparison problem, we can add the new condition that all rows that get selected shouldn't have an `NA` in the `Weight` column:
 
 ```{r, output.lines = 4}
@@ -70,10 +73,10 @@ Like always when [filtering specific rows](https://nickhaf.github.io/r_tutorial/
 ```
 
 We also assign the new name `athletes_na` to the resulting data frame, so we don't overwrite the original one.
-
 :::
 
 ### Removing `NA's`
+
 Removing `NA's` from a data frame works pretty similar:
 
 ```{r}
